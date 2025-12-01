@@ -5,9 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+// Controller for HelloSpring App
 public class HelloController {
 
     @GetMapping("/")
+    // GetMapping + / = homepage called greeting with models for variables
     public String greeting(Model model) {
 
         String name = "Berit";
@@ -18,6 +20,7 @@ public class HelloController {
     }
 
     @GetMapping("/about")
+    // GetMapping + /about = about page
     public String about() {
         return "about";
     }
